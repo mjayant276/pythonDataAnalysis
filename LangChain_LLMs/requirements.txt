@@ -1,0 +1,12 @@
+openai
+langchain
+python-dotenv
+pinecone-client
+huggingface_hub
+streamlit
+pypdf
+docx2txt
+wikipedia
+tiktoken
+chroma
+chromadb

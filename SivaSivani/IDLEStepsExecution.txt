@@ -1,0 +1,14 @@
+Run the code from the file in IDLE
+1. Open IDLE (Integrated Development and Learning Environment)
+2.Go to File Menu - File --> New File
+3. Code editor window opens up
+4. Copy the code and Paste the Code in the code editor
+   a. Here write a function to paste the copied code Ex: FacebookList is the function Name
+     def FacebookList():
+   b. Write the main method
+      In the main() method call the FacebookList() function
+      if __name__ == '__main__':
+	 FacebookList()
+5. Save the file using the menu or Ctrl + S
+6. Run the program from menu or use 'F5' to run             
+         

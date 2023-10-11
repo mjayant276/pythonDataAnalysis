@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dask task graph</title>
+</head>
+<body>
+
+
+<!-- Load require.js. Delete this if your page already loads require.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js" crossorigin="anonymous"></script>
+
+<script type="application/vnd.jupyter.widget-state+json">
+{
+  "version_major": 2,
+  "version_minor": 0,
+  "state": {
+    "977ccc190db046d5bac3d9b0475fb5db": {
+      "model_name": "LayoutModel",
+      "model_module": "@jupyter-widgets/base",
+      "model_module_version": "2.0.0",
+      "state": {
+        "height": "400px"
+      }
+    },
+    "7d85b52b18a945a4aea1421de410da3c": {
+      "model_name": "GraphModel",
+      "model_module": "jupyter-cytoscape",
+      "model_module_version": "^1.3.3",
+      "state": {
+        "_adj": {},
+        "edges": [],
+        "nodes": []
+      }
+    },
+    "38e1f4ca305f41b88a32b3709147a158": {
+      "model_name": "CytoscapeModel",
+      "model_module": "jupyter-cytoscape",
+      "model_module_version": "^1.3.3",
+      "state": {
+        "_dom_classes": [],
+        "cytoscape_layout": {
+          "name": "dagre",
+          "rankDir": "BT",
+          "nodeSep": 10,
+          "edgeSep": 10,
+          "spacingFactor": 1,
+          "nodeDimensionsIncludeLabels": true
+        },
+        "cytoscape_style": [
+          {
+            "selector": "node",
+            "style": {
+              "font-family": "helvetica",
+              "font-size": "24px",
+              "font-weight": "bold",
+              "color": "black",
+              "background-color": "#eee",
+              "border-color": "data(color)",
+              "border-width": 4,
+              "opacity": "1.0",
+              "text-valign": "center",
+              "text-halign": "center",
+              "label": "data(label)",
+              "shape": "data(shape)",
+              "width": 64,
+              "height": 64
+            }
+          },
+          {
+            "selector": "edge",
+            "style": {
+              "width": 8,
+              "line-color": "gray",
+              "target-arrow-shape": "triangle",
+              "target-arrow-color": "gray",
+              "curve-style": "bezier"
+            }
+          }
+        ],
+        "graph": "IPY_MODEL_d20edfff59a54f879185c0341707206f",
+        "layout": "IPY_MODEL_977ccc190db046d5bac3d9b0475fb5db",
+        "max_zoom": 4.0,
+        "min_zoom": 0.2,
+        "rendered_position": {
+          "renderedPosition": {
+            "x": 100,
+            "y": 100
+          }
+        },
+        "wheel_sensitivity": 0.1
+      }
+    },
+    "d20edfff59a54f879185c0341707206f": {
+      "model_name": "GraphModel",
+      "model_module": "jupyter-cytoscape",
+      "model_module_version": "^1.3.3",
+      "state": {
+        "_adj": {
+          "6387472681646692245": {
+            "8992058436816523944": 1
+          },
+          "8992058436816523944": {
+            "7087159711472020890": 1
+          },
+          "5583345776498119203": {
+            "-2947044880791029247": 1
+          },
+          "-2947044880791029247": {
+            "768583925921627499": 1
+          },
+          "7087159711472020890": {
+            "1164118370350808819": 1
+          },
+          "1164118370350808819": {
+            "-6581326515788930544": 1
+          },
+          "768583925921627499": {
+            "-3728955658621887547": 1
+          },
+          "-3728955658621887547": {
+            "-6581326515788930544": 1
+          },
+          "-6581326515788930544": {
+            "5724203737117742083": 1
+          },
+          "5724203737117742083": {}
+        },
+        "edges": [
+          "IPY_MODEL_f7047129b9fc4ff08c3ce7af18288d60",
+          "IPY_MODEL_c947e43b054c41f0b3ddc1fc9651c8a2",
+          "IPY_MODEL_4132222738ac4497b9fd4844ed0e41b6",
+          "IPY_MODEL_1cd705c01daa4c6a90db3722a0077b7f",
+          "IPY_MODEL_6975d0719ed346528cbde1498f0e744f",
+          "IPY_MODEL_dc0a3b02606b4136898457c840da6962",
+          "IPY_MODEL_d5b1ba749dfe41709655d9e7119f3250",
+          "IPY_MODEL_6c5adc3a1211482ea43a80b3e889a5ca",
+          "IPY_MODEL_8f74eb0d09b54620a501793523ff7808"
+        ],
+        "nodes": [
+          "IPY_MODEL_0638b58ba76a4aa78d1434ecef5bb165",
+          "IPY_MODEL_0f94e25ea3f04194989744ec23780865",
+          "IPY_MODEL_c7a7ce2aaa414628a2aa3e3c5853eeb0",
+          "IPY_MODEL_5fff458405ae40d7b0b86363b847fbb3",
+          "IPY_MODEL_e246ab1309eb49d280836e74208d0178",
+          "IPY_MODEL_49b085e0825142e5847496b78512c20a",
+          "IPY_MODEL_342cb0765ad541dd97f27a1f09b91051",
+          "IPY_MODEL_bdd7678242be4a44b5e60d5fbef5697e",
+          "IPY_MODEL_c98dd2839cc3474aaae6a182039d0d8c",
+          "IPY_MODEL_0bd5216d0d3343fd8495f3aa0f477903"
+        ]
+      }
+    },
+    "0638b58ba76a4aa78d1434ecef5bb165": {
+      "model_name": "NodeModel",
+      "model_module": "jupyter-cytoscape",
+      "model_module_version": "^1.3.3",
+      "state": {
+        "data": {
+          "id": "6387472681646692245",
+          "label": "ones_like",
+          "shape": "ellipse",
+          "color": "gray"
+        },
+        "position": {}
+      }
+    },
+    "0f94e25ea3f04194989744ec23780865": {
+      "model_name": "NodeModel",
+      "model_module": "jupyter-cytoscape",
+      "model_module_version": "^1.3.3",
+      "state": {
+        "data": {
+          "id": "8992058436816523944",
+          "label": "0",
+          "shape": "rectangle",
+          "color": "gray"
+        },
+        "position": {}
+      }
+    },
+    "c7a7ce2aaa414628a2aa3e3c5853eeb0": {
+      "model_name": "NodeModel",
+      "model_module": "jupyter-cytoscape",
+      "model_module_version": "^1.3.3",
+      "state": {
+        "data": {
+          "id": "5583345776498119203",
+          "label": "ones_like",
+          "shape": "ellipse",
+          "color": "gray"
+        },
+        "position": {}
+      }
+    },
+    "5fff458405ae40d7b0b86363b847fbb3": {
+      "model_name": "NodeModel",
+      "model_module": "jupyter-cytoscape",
+      "model_module_version": "^1.3.3",
+      "state": {
+        "data": {
+          "id": "-2947044880791029247",
+          "label": "1",
+          "shape": "rectangle",
+          "color": "gray"
+        },
+        "position": {}
+      }
+    },
+    "e246ab1309eb49d280836e74208d0178": {
+      "model_name": "NodeModel",
+      "model_module": "jupyter-cytoscape",
+      "model_module_version": "^1.3.3",
+      "state": {
+        "data": {
+          "id": "7087159711472020890",
+          "label": "sum",
+          "shape": "ellipse",
+          "color": "gray"
+        },
+        "position": {}
+      }
+    },
+    "49b085e0825142e5847496b78512c20a": {
+      "model_name": "NodeModel",
+      "model_module": "jupyter-cytoscape",
+      "model_module_version": "^1.3.3",
+      "state": {
+        "data": {
+          "id": "1164118370350808819",
+          "label": "0",
+          "shape": "rectangle",
+          "color": "gray"
+        },
+        "position": {}
+      }
+    },
+    "342cb0765ad541dd97f27a1f09b91051": {
+      "model_name": "NodeModel",
+      "model_module": "jupyter-cytoscape",
+      "model_module_version": "^1.3.3",
+      "state": {
+        "data": {
+          "id": "768583925921627499",
+          "label": "sum",
+          "shape": "ellipse",
+          "color": "gray"
+        },
+        "position": {}
+      }
+    },
+    "bdd7678242be4a44b5e60d5fbef5697e": {
+      "model_name": "NodeModel",
+      "model_module": "jupyter-cytoscape",
+      "model_module_version": "^1.3.3",
+      "state": {
+        "data": {
+          "id": "-3728955658621887547",
+          "label": "1",
+          "shape": "rectangle",
+          "color": "gray"
+        },
+        "position": {}
+      }
+    },
+    "c98dd2839cc3474aaae6a182039d0d8c": {
+      "model_name": "NodeModel",
+      "model_module": "jupyter-cytoscape",
+      "model_module_version": "^1.3.3",
+      "state": {
+        "data": {
+          "id": "-6581326515788930544",
+          "label": "sum-aggregate",
+          "shape": "ellipse",
+          "color": "gray"
+        },
+        "position": {}
+      }
+    },
+    "0bd5216d0d3343fd8495f3aa0f477903": {
+      "model_name": "NodeModel",
+      "model_module": "jupyter-cytoscape",
+      "model_module_version": "^1.3.3",
+      "state": {
+        "data": {
+          "id": "5724203737117742083",
+          "label": "()",
+          "shape": "rectangle",
+          "color": "gray"
+        },
+        "position": {}
+      }
+    },
+    "f7047129b9fc4ff08c3ce7af18288d60": {
+      "model_name": "EdgeModel",
+      "model_module": "jupyter-cytoscape",
+      "model_module_version": "^1.3.3",
+      "state": {
+        "classes": " directed ",
+        "data": {
+          "source": "6387472681646692245",
+          "target": "8992058436816523944"
+        }
+      }
+    },
+    "c947e43b054c41f0b3ddc1fc9651c8a2": {
+      "model_name": "EdgeModel",
+      "model_module": "jupyter-cytoscape",
+      "model_module_version": "^1.3.3",
+      "state": {
+        "classes": " directed ",
+        "data": {
+          "source": "5583345776498119203",
+          "target": "-2947044880791029247"
+        }
+      }
+    },
+    "4132222738ac4497b9fd4844ed0e41b6": {
+      "model_name": "EdgeModel",
+      "model_module": "jupyter-cytoscape",
+      "model_module_version": "^1.3.3",
+      "state": {
+        "classes": " directed ",
+        "data": {
+          "source": "7087159711472020890",
+          "target": "1164118370350808819"
+        }
+      }
+    },
+    "1cd705c01daa4c6a90db3722a0077b7f": {
+      "model_name": "EdgeModel",
+      "model_module": "jupyter-cytoscape",
+      "model_module_version": "^1.3.3",
+      "state": {
+        "classes": " directed ",
+        "data": {
+          "source": "8992058436816523944",
+          "target": "7087159711472020890"
+        }
+      }
+    },
+    "6975d0719ed346528cbde1498f0e744f": {
+      "model_name": "EdgeModel",
+      "model_module": "jupyter-cytoscape",
+      "model_module_version": "^1.3.3",
+      "state": {
+        "classes": " directed ",
+        "data": {
+          "source": "768583925921627499",
+          "target": "-3728955658621887547"
+        }
+      }
+    },
+    "dc0a3b02606b4136898457c840da6962": {
+      "model_name": "EdgeModel",
+      "model_module": "jupyter-cytoscape",
+      "model_module_version": "^1.3.3",
+      "state": {
+        "classes": " directed ",
+        "data": {
+          "source": "-2947044880791029247",
+          "target": "768583925921627499"
+        }
+      }
+    },
+    "d5b1ba749dfe41709655d9e7119f3250": {
+      "model_name": "EdgeModel",
+      "model_module": "jupyter-cytoscape",
+      "model_module_version": "^1.3.3",
+      "state": {
+        "classes": " directed ",
+        "data": {
+          "source": "-6581326515788930544",
+          "target": "5724203737117742083"
+        }
+      }
+    },
+    "6c5adc3a1211482ea43a80b3e889a5ca": {
+      "model_name": "EdgeModel",
+      "model_module": "jupyter-cytoscape",
+      "model_module_version": "^1.3.3",
+      "state": {
+        "classes": " directed ",
+        "data": {
+          "source": "1164118370350808819",
+          "target": "-6581326515788930544"
+        }
+      }
+    },
+    "8f74eb0d09b54620a501793523ff7808": {
+      "model_name": "EdgeModel",
+      "model_module": "jupyter-cytoscape",
+      "model_module_version": "^1.3.3",
+      "state": {
+        "classes": " directed ",
+        "data": {
+          "source": "-3728955658621887547",
+          "target": "-6581326515788930544"
+        }
+      }
+    }
+  }
+}
+</script>
+<script type="application/vnd.jupyter.widget-view+json">
+{"version_major": 2, "version_minor": 0, "model_id": "38e1f4ca305f41b88a32b3709147a158"}
+</script>
+
+</body>
+</html>

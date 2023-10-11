@@ -1,0 +1,3 @@
+https://vitalflux.com/poisson-distribution-explained-with-python-examples/
+https://www.statology.org/poisson-distribution-python/
+https://vitalflux.com/poisson-distribution-explained-with-python-examples/
